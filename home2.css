@@ -1,0 +1,177 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    color: white;
+    font-family: monospace;
+    margin-bottom: 10px;
+    font-size: 3em ;
+}
+body {
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensures video and form are positioned correctly */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Ensures header is above the video and form */
+}
+
+.logo {
+    font-family:poppins;
+    font-size: 2em;
+    font-weight: 250;
+    color: white;
+    user-select: none;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    position: relative;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: blue;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.btnLogin-popup {
+    width: 100px;
+    height: 38px;
+    background: transparent;
+    border: 1px solid rgb(37, 59, 226);
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.6em;
+    font-family: monospace;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.1s;
+}
+
+.bkvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ensure video stays behind everything */
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Form is above video but below header */
+    color: blue;
+}
+
+.logp .form {
+    background-color: rgba(255, 255, 255, 0.148); /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 350px;
+    border: 1px solid rgb(37, 59, 226);
+
+}
+
+.input {
+    position: relative;
+    margin-top: 40px;
+    
+    border-radius: 10px;
+    border-top: 10px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    font-size: 3em;
+   
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input input:focus + label,
+.input input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 1em;
+    color: whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end;   /* Align at the bottom */
+    height: 100vh;           /* Full height of the viewport */
+}
+
+.img{
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    z-index: 1;
+}
